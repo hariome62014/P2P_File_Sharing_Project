@@ -1,0 +1,25 @@
+/* Apply blur to background when modal is open */
+.blur-background {
+    filter: blur(8px); /* Adjust blur intensity */
+    transition: filter 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Ensure modal is positioned correctly */
+  .fixed {
+    position: fixed;
+  }
+  
+  .bg-black {
+    backdrop-filter: blur(8px); /* Optional: For additional blur on overlay */
+  }
+  
+  /* Prevent interaction with the background when modal is active */
+  .blur-background,
+  .fixed.inset-0.bg-black {
+    pointer-events: none;
+  }
+  
+  .relative.z-10 {
+    pointer-events: auto; /* Allow modal content interaction */
+  }
+  
